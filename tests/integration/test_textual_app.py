@@ -65,6 +65,5 @@ async def test_app_hard_drop_advances_state():
         await pilot.pause()
         # Tras un hard drop, debe haber spawn de la siguiente pieza
         assert (
-            app.session.state.active.kind != initial_kind
-            or app.session.state.game_over
+            app.session.state.active.kind != initial_kind or app.session.state.game_over
         )
