@@ -29,6 +29,30 @@ moderno (`uv`, `pyproject.toml`, CI).
 
 ## Inicio rápido
 
+### Windows (doble clic)
+
+```cmd
+run.bat
+```
+
+`run.bat` detecta `uv` y lo usa; si no está, crea un venv local en
+`.venv\` con `py -3.13` e instala el juego. Acepta los mismos flags
+que el CLI:
+
+```cmd
+run.bat --demo --seed 42
+run.bat --seed 1986
+```
+
+### Linux / macOS
+
+```bash
+./run.sh                       # juega
+./run.sh --demo --seed 42      # demo determinista
+```
+
+### Manual (cualquier plataforma)
+
 ```bash
 # instalar dependencias en un entorno virtual administrado por uv
 uv sync
