@@ -76,6 +76,8 @@ select = [
 ]
 ignore = [
   "ANN401",  # Any allowed in narrow places (escapes hatch)
+  "E741",    # I, O are canonical Tetris piece names
+  "RUF002",  # × en docstrings es intencional
   "PLR0913", # many args (Textual widgets)
   "PLR2004", # magic numbers in domain constants/tests
   "PLR0911", # many returns acceptable in reducers
