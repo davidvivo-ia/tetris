@@ -133,9 +133,7 @@ def test_tick_eventually_locks_piece():
 
 def test_lines_cleared_event_when_full_row():
     # Fila inferior con dos huecos en columnas 4 y 5; un O al caer rellena
-    bottom = tuple(
-        None if i in (4, 5) else TetrominoKind.I for i in range(COLS)
-    )
+    bottom = tuple(None if i in (4, 5) else TetrominoKind.I for i in range(COLS))
     empty = tuple(None for _ in range(COLS))
     rows = [empty] * (ROWS - 1) + [bottom]
     board = Board(grid=tuple(rows))
@@ -223,9 +221,7 @@ def test_spawn_piece_position():
 
 def test_game_over_when_new_piece_does_not_fit():
     # Bloqueo en la zona de spawn (cols 3-6, filas 0-1) sin filas llenas
-    top_blocker = tuple(
-        TetrominoKind.I if 3 <= i <= 6 else None for i in range(COLS)
-    )
+    top_blocker = tuple(TetrominoKind.I if 3 <= i <= 6 else None for i in range(COLS))
     empty = tuple(None for _ in range(COLS))
     rows = [top_blocker] + [empty] * (ROWS - 1)
     board = Board(grid=tuple(rows))
