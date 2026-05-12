@@ -1,0 +1,85 @@
+/* Phosphor 2026 — sistema visual de la TUI Tetris. */
+
+Screen {
+    background: #0B0F0A;
+    color: #7FFFB2;
+}
+
+#layout {
+    layout: horizontal;
+    padding: 1 2;
+}
+
+#board-panel {
+    width: 24;
+    height: 22;
+    border: round #7FFFB2;
+    padding: 0 0;
+    margin-right: 2;
+    background: #11160F;
+}
+
+#side-panel {
+    width: 22;
+    height: 22;
+    layout: vertical;
+}
+
+.hud-block {
+    border: round #4A5A4A;
+    padding: 0 1;
+    margin-bottom: 1;
+    background: #11160F;
+}
+
+#title {
+    color: #7FFFB2;
+    text-style: bold;
+    content-align: center middle;
+    height: 1;
+    margin-bottom: 1;
+}
+
+.label {
+    color: #4A5A4A;
+    text-style: bold;
+}
+
+.value {
+    color: #7FFFB2;
+    text-style: bold;
+}
+
+.accent {
+    color: #E5C100;
+}
+
+.danger {
+    color: #FF5C7A;
+}
+
+#overlay {
+    layer: overlay;
+    align: center middle;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 15, 10, 0.78);
+}
+
+#overlay Static {
+    content-align: center middle;
+    width: auto;
+    padding: 1 3;
+    border: round #7FFFB2;
+    background: #11160F;
+    text-style: bold;
+}
+
+#overlay.danger Static {
+    border: round #FF5C7A;
+    color: #FF5C7A;
+}
+
+#help {
+    color: #4A5A4A;
+}
