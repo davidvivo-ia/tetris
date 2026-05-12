@@ -29,6 +29,20 @@ moderno (`uv`, `pyproject.toml`, CI).
 
 ## Inicio rápido
 
+### Sólo Python (lo más simple)
+
+Con las dependencias instaladas (`pip install -e .` o `uv sync`):
+
+```bash
+python play.py                       # juega
+python play.py --seed 1986           # partida reproducible
+python play.py --demo --seed 42      # demo determinista
+python -m tetris --demo --seed 42    # equivalente si el paquete está instalado
+```
+
+`play.py` añade `src/` al `sys.path`, así que no necesita
+`pip install` si tus deps ya están en el intérprete actual.
+
 ### Windows (doble clic)
 
 ```cmd
